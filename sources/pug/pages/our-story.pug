@@ -1,0 +1,126 @@
+extends  ../_skeleton
+
+//- Includes
+include ../elements/_ui-breadcrumbs
+include ../elements/_ui-timeline-inner-box
+
+block variables
+  - var activeIndex = 2
+  - var pageName = 'Our story'
+
+block page
+
+  // Page header
+  include ../sections/_header-default
+
+  +breadcrumbs({
+    path: [[menu[activeIndex].title, menu[activeIndex].link], [pageName]]
+  })
+
+  section.section-xl.bg-default.text-center
+    .container
+      h3 Our Story
+      .timeline-heading
+        +jpg('timeline-1-109x109','rounded-circle')
+        h6 by Brian Williamson
+      .row.no-gutters.timeline-variant-1
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Advantages of HTML Templates',
+            text: 'Our HTML templates can provide any business, small and big, with a good starting point of developing their image on the web.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'A Wide Variety of Child Themes',
+            text: 'This template has lots of child themes, which will satisfy even the most exquisite tastes of website owners worldwide.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Transforming Your Company Website',
+            text: 'If your company needs something better than a simple website but has a strict budget, Monstroid is definitely what you need.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Professionally designed templates',
+            text: 'All the HTML templates that we have here have had a vast team of professional designers sketching and working on them.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Creating Portfolio.',
+            text: 'We recommend focusing on 4 most essential characteristics, each vital for your company’s to have an efficient and long-standing online presence!'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Using Bootstrap Framework',
+            text: 'Bootstrap Framework is a powerful tool, which enables any web developer with vast possibilities on creating attractive websites.'
+          })
+
+          
+  section.section-xl.bg-default.text-center
+    .container
+      h3 Our Story
+      .timeline-heading
+        +jpg('timeline-1-109x109','rounded-circle')
+        h6 by Brian Williamson
+      .row.no-gutters.timeline-variant-2
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Professionally designed templates',
+            text: 'All the HTML templates that we have here have had a vast team of professional designers sketching and working on them.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'A Wide Variety of Child Themes',
+            text: 'This template has lots of child themes, which will satisfy even the most exquisite tastes of website owners worldwide.'
+          })
+        .col-sm-12
+          +timeline-inner({
+            time: 'Jan.20, 2016',
+            title: 'Transforming Your Company Website',
+            text: 'If your company needs something better than a simple website but has a strict budget, Monstroid is definitely what you need.'
+          })
+
+
+  section.section-xl.bg-default.text-center
+    .container
+      h3 Our Story
+      .timeline-heading
+        +jpg('timeline-1-109x109','rounded-circle')
+        h6 by Brian Williamson
+      .row.justify-content-sm-center
+        .col-md-10.col-xl-8
+          // Owl Carousel
+          .owl-carousel.timeline-variant-3(data-items='1', data-stage-padding='0', data-loop='false', data-margin='0', data-mouse-drag="false" data-nav='true' )
+            .item
+              +timeline-inner({
+                time: 'Jan.20, 2016',
+                title: 'Professionally designed templates',
+                text: 'All the HTML templates that we have here have had a vast team of professional designers sketching and working on them.'
+              })
+            .item
+              +timeline-inner({
+                time: 'Jan.20, 2016',
+                title: 'A Wide Variety of Child Themes',
+                text: 'This template has lots of child themes, which will satisfy even the most exquisite tastes of website owners worldwide.'
+              })
+            .item
+              +timeline-inner({
+                time: 'Jan.20, 2016',
+                title: 'Transforming Your Company Website',
+                text: 'If your company needs something better than a simple website but has a strict budget, Monstroid is definitely what you need.'
+              })
+
+
+
+
+  // Page Footer
+  include ../sections/_footer-corporate
+

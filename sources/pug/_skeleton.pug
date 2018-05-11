@@ -1,0 +1,259 @@
+- var fonts = "//fonts.googleapis.com/css?family=Libre+Franklin:200,300,500,600,300italic"
+- var html_class = "wide wow-animation"
+
+include _mixins
+include _config
+
+block variables
+
+doctype html
+
+html(lang="en" class=html_class)
+  head
+    // Site Title
+    block title
+      title=pageName
+
+    meta(name="format-detection" content="telephone=no")
+    meta(name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    meta(charset='utf-8')
+
+    link(rel="icon" href="images/favicon.ico" type="image/x-icon")
+
+    // Stylesheets
+    link(rel="stylesheet" type="text/css" href=fonts)
+    link(rel="stylesheet" href="css/bootstrap.css")
+    link(rel="stylesheet" href="css/style.css")
+
+    = "\n\t\t"
+    <!--[if lt IE 10]>
+    div(style='background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;')
+      a(href="http://windows.microsoft.com/en-US/internet-explorer/")
+        img(src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today.")
+    script(src="js/html5shiv.min.js")
+    = "\n\t\t"
+    <![endif]-->
+  body
+    // Page 
+    .page 
+      #page-loader: .cssload-container: .cssload-speeding-wheel
+        
+      if (includeLayoutPanel)
+        .layout-panel-wrap
+          .layout-panel
+            button.layout-panel-toggle(data-custom-toggle='.layout-panel-wrap' data-custom-toggle-disable-on-blur='true')
+              span
+
+            .layout-panel-content.scroll-wrap
+              .layout-panel-inner.isotope-wrap
+                .layout-panel-header
+                  a.button.button-primary.button-icon.button-icon-left(href=getTemplateLink)
+                    span.icon.linear-icon-cart
+                    | Buy template 
+                  .layout-panel-element
+                    img(src='images/layout-panel/logo-174x32.png', alt='', width='174', height='32')
+
+                // Isotope Filters
+                .isotope-filters
+                  ul.inline-list-xxs
+                    li: a.active(data-isotope-filter='*', data-isotope-group='layouts', href='#') All
+                    li: a(data-isotope-filter='templates', data-isotope-group='layouts', href='#') Templates
+                    li: a(data-isotope-filter='headers', data-isotope-group='layouts', href='#') Headers
+                    li: a(data-isotope-filter='footers', data-isotope-group='layouts', href='#') Footers
+
+                  // Isotope Content
+                .layout-panel-main
+                  .isotope(data-isotope-layout='fitRows', data-isotope-group='layouts')
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-1',
+                        title: 'Default',
+                        link: 'index-home.html' 
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-2',
+                        title: 'Business',
+                        link: 'home-business.html'
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-3',
+                        title: 'Commercia;',
+                        link: 'home-commercial.html'
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-4',
+                        title: 'Creative',
+                        link: 'home-creative.html'
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-5',
+                        title: 'Minimal',
+                        link: 'home-minimal.html'
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-6',
+                        title: 'Modern',
+                        link: 'home-modern.html'
+                      })
+
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-7',
+                        title: 'Personal',
+                        link: 'home-personal.html'
+                      })
+                    //home default
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-1',
+                        title: 'home-default-1',
+                        link: 'home-default-1.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-2',
+                        title: 'home-default-2',
+                        link: 'home-default-2.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-3',
+                        title: 'home-default-3',
+                        link: 'home-default-3.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-4',
+                        title: 'home-default-4',
+                        link: 'home-default-4.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-5',
+                        title: 'home-default-5',
+                        link: 'home-default-5.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-6',
+                        title: 'home-default-6',
+                        link: 'home-default-6.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-7',
+                        title: 'home-default-7',
+                        link: 'home-default-7.html'
+                      })
+                    .isotope-item(data-filter='templates')
+                      +thumbnail-small({
+                        filename: 'monstr-home-default-8',
+                        title: 'home-default-8',
+                        link: 'home-default-8.html'
+                      })
+                    
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-1',
+                        title: 'Header Default',
+                        link: 'header-default.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-2',
+                        title: 'Header Default Dark',
+                        link: 'header-default-dark.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-3',
+                        title: 'Header Modern',
+                        link: 'header-modern.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-4',
+                        title: 'Header Creative',
+                        link: 'header-creative.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-5',
+                        title: 'Header Corporate',
+                        link: 'header-corporate.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-6',
+                        title: 'Header Transparent',
+                        link: 'header-transparent.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-7',
+                        title: 'Header Sidebar',
+                        link: 'header-sidebar.html'
+                      })
+
+                    .isotope-item(data-filter='headers')
+                      +thumbnail-small({
+                        filename: 'header-8',
+                        title: 'Header Sidebar Inverse',
+                        link: 'header-sidebar-inverse.html'
+                      })
+
+                    .isotope-item(data-filter='footers')
+                      +thumbnail-small({
+                        filename: 'footer-1',
+                        title: 'Footer Corporate',
+                        link: 'footer-corporate.html'
+                      })
+
+                    .isotope-item(data-filter='footers')
+                      +thumbnail-small({
+                        filename: 'footer-2',
+                        title: 'Footer Minimal',
+                        link: 'footer-minimal.html'
+                      })
+
+                    .isotope-item(data-filter='footers')
+                      +thumbnail-small({
+                        filename: 'footer-3',
+                        title: 'Footer Modern',
+                        link: 'footer-modern.html'
+                      })
+
+                    
+        
+      block page
+        
+
+      block modals
+
+    // Global Mailform Output
+    #form-output-global.snackbars
+
+    // Javascript
+    script(src="js/core.min.js")
+    script(src="js/script.js")
+
+    if(codedBy)
+      // coded by retoyfer & JeremyLuis
