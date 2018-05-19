@@ -2500,10 +2500,8 @@ figure img {
 
 .thumb-centered img {
 	position: absolute;
-	top: 50%;
-	left: 50%;
-	will-change: transform;
-	transform: translate3d(-50%, -50%, 0);
+	top: 0%;
+	left: 0%;
 	height: auto;
 	width: auto;
 	min-width: 100%;
