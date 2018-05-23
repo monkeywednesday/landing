@@ -4114,6 +4114,10 @@ h3+.panel-custom-group-wrap {
 	pointer-events: none;
 }
 
+.post-modern__inner .waterfall {
+	background: rgba(107, 184, 242, 0.66);
+}
+
 .post-modern__inner>* {
 	position: relative;
 	z-index: 1;
