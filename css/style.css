@@ -146,7 +146,7 @@ body {
 	-webkit-font-smoothing: subpixel-antialiased;
 	font-size: 14px;
 	font-weight: 300;
-	font-family: "Libre Franklin", Helvetica, Arial, sans-serif;
+	font-family: "Libre Franklin", Helvetica, Arial, "Microsoft JhengHei", sans-serif;
 	line-height: 1.88889;
 	color: #888;
 }
